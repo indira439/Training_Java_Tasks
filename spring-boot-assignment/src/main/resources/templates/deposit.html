@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form th:action="@{/deposit}" th:object="${acct}" >
+	<label>Account Number</label>
+	<input type="number" th:field="*{accountNo}"><br/>
+	<label>Account Name</label>
+	<input type="text" th:field="*{accountName}"><br/>
+	<label>Amount</label>
+	<input type="number" th:field="*{accountBalance}"><br/>
+	<br/>
+	<input type="submit" value="Deposit Amount"/>
+	<input type="reset" value="reset"/>
+</form>
+</body>
+</html>

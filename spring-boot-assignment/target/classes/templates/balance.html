@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>Welcome to Account's management</h2>
+<span th:text="${msg}" style="color:red"></span>
+<form th:action="@{/balance}" th:object="${acct}" >
+	<label>Account Number</label>
+	<input type="number" th:field="*{accountNo}"><br/>
+	<br/>
+	<input type="submit" value="Check Balance"/>
+	<input type="reset" value="reset"/>
+</form>
+</body>
+</html>
